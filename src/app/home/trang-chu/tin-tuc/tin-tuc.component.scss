@@ -1,0 +1,167 @@
+@import "main";
+.tin-tuc {
+  padding-top: $pad-mar8;
+  @include for-size(md) {
+    max-width: 960px;
+  }
+  @include for-size(sm) {
+    max-width: 100%;
+  }
+  .tin-tuc__header {
+    padding-bottom: $pad-mar6;
+    text-align: center;
+  }
+  .tin-tuc__content {
+    color: black;
+    @include for-size(sm) {
+      padding: $pad-mar1;
+    }
+    .tin-tuc__item {
+      padding: $pad-mar3 0;
+      @include for-size(sm) {
+        padding: $pad-mar2;
+      }
+      @include for-size(xs) {
+        padding: 5px;
+      }
+      .tin-tuc__img {
+        img {
+          border: 2px solid transparent;
+          border-radius: 5px;
+          @include for-size(xs) {
+            border: 2px solid $color-fontL-o8;
+          }
+        }
+      }
+      transition: all 0.5s;
+      position: relative;
+      &:hover {
+        .tin-tuc__title a {
+          color: $color-but-lo;
+        }
+        .tin-tuc__img img {
+          border: 2px solid $color-fontL-o8;
+          border-radius: 5px;
+        }
+      }
+      .tin-tuc__title {
+        a {
+          text-decoration: none;
+          color: black;
+          display: block;
+          font-size: 25px;
+          max-width: 100%;
+          text-overflow: " " ellipsis;
+          overflow: hidden;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          @include for-size(sm) {
+            font-size: 20px;
+            line-height: 30px;
+            height: 65px;
+          }
+          @include for-size(xs) {
+            padding: 5px;
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .tin-tuc__item2 {
+      .tin-tuc__title {
+        padding: 5px 0;
+        a {
+          font-size: 1.5rem;
+          @include for-size(md) {
+            font-size: 20px;
+          }
+          @include for-size(sm) {
+            font-size: 18px;
+          }
+          @include for-size(xs) {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+    .tin-tuc__item3 {
+      padding-bottom: $pad-mar2;
+      @include for-size(phone-sm) {
+        // margin: $pad-mar2 0;
+      }
+      @include for-size(xs) {
+        // height: 100px;
+      }
+      .tin-tuc__img {
+        width: 70%;
+      }
+      .tin-tuc__title {
+        width: 100%;
+        padding: 0 $pad-mar2;
+        @include for-size(sm) {
+        }
+        a {
+          font-size: 1rem;
+          @include for-size(md) {
+            text-overflow: " " ellipsis;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+            line-height: 1.5;
+            font-size: 15px;
+            height: 65px;
+          }
+          @include for-size(sm) {
+            line-height: 1.5;
+            font-size: 12px;
+            height: 36px;
+            -webkit-line-clamp: 2;
+          }
+          @include for-size(xs) {
+            height: 97%;
+            font-size: 18px;
+            -webkit-line-clamp: 3;
+          }
+          @include for-size(phone-sm) {
+            font-size: $font-size2;
+            height: 100px;
+            -webkit-line-clamp: 3;
+          }
+          @include for-size(iphone) {
+            font-size: $font-size2;
+            height: 70px;
+            -webkit-line-clamp: 3;
+          }
+        }
+      }
+    }
+  }
+}
+.tin-tuc-dark {
+  .tin-tuc__header {
+    text-align: center;
+  }
+  .tin-tuc__content {
+    color: $color-fontD;
+    .tin-tuc__item {
+      &:hover {
+        .tin-tuc__img img {
+          border: 2px solid $color-fontD-o8;
+          border-radius: 5px;
+        }
+      }
+      .tin-tuc__title {
+        a {
+          color: $color-fontD;
+        }
+      }
+      .tin-tuc__img {
+        img {
+          @include for-size(xs) {
+            border: 2px solid $color-fontD-o8;
+          }
+        }
+      }
+    }
+  }
+}

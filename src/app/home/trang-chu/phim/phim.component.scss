@@ -1,0 +1,54 @@
+@import 'main';
+.dsPhim {
+  padding-top: $pad-mar8;
+  .dsPhim__title {
+    padding-bottom: $pad-mar5;
+    .active {
+      border-bottom: 2px solid #fb422691;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    .disabled {
+      color: $color-headingL;
+      cursor: pointer;
+      transition: all 0.4s;
+      border: none;
+      font-size: 20px;
+      &:hover {
+        color: $color-fontL;
+        font-size: 25px;
+      }
+    }
+  }
+  .dsPhim__content {
+    width: 90%;
+    max-width: 1160px;
+    margin: 0 auto;
+    @include for-size(lg) {
+      max-width: 760px;
+    }
+    @include for-size(sm) {
+      max-width: 560px;
+    }
+    @include for-size(xs) {
+      max-width: 85%;
+    }
+    @include for-size(phone-sm) {
+      max-width: 250px;
+    }
+   
+
+  }
+}
+
+.dsPhim-dark {
+  .dsPhim__title {
+    .disabled {
+      color: $color-headingD;
+      &:hover {
+        color: $color-fontD;
+        font-size: 25px;
+      }
+    }
+  }
+}

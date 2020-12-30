@@ -1,0 +1,12 @@
+<div class="popup" *ngIf='isPopup'>
+    <div  class="popup-combo" (click)="closePopup()">
+    </div>
+    <div class="modal-content--config">
+        <div class="close-modal" (click)="closePopup()">
+            <img src="assets/img/close.png" alt="">
+        </div>
+        <img *ngIf='content == "combo"' (click)="popup()" src="assets/img/combo.jpg" alt="">
+        <img (click)="popup()" *ngIf='content == "Film"' src="assets/img/poster-ddc.jpg" alt="">
+    </div>
+    
+</div>

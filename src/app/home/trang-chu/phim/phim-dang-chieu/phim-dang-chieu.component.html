@@ -1,0 +1,12 @@
+<div class="phim-dc mx-auto" [ngClass]="{'dark-phimDc':isTheme}" >
+  <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let phimItem of phimDC" class="slide">
+      <app-phim-item (transTrailer)="getTrailer($event)" [phim]="phimItem" [isTheme]=isTheme></app-phim-item>
+    </div>
+  </ngx-slick-carousel>
+</div>
+
+<!-- Modal -->
+<div *ngIf="trailer">
+  <app-modal-youtube (click)="closeModal()" [trailer]='trailer'></app-modal-youtube>
+  <div>
